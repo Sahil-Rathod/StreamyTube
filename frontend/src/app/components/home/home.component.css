@@ -1,0 +1,56 @@
+.video-container {
+  padding: 20px;
+}
+
+.loading-spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.video-card {
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  cursor: pointer;
+  background-color: #1e1e1e;
+  color: white;
+}
+
+.video-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+.thumbnail {
+  height: 200px;
+  object-fit: cover;
+  border-radius: 4px 4px 0 0;
+}
+
+mat-card-content {
+  padding-top: 16px;
+  flex-grow: 1;
+}
+
+.video-author {
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.video-duration {
+  font-size: 0.9em;
+  color: #aaaaaa;
+}
+
+mat-card-actions {
+  display: flex;
+  justify-content: flex-end;
+}

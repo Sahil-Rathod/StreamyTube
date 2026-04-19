@@ -1,0 +1,29 @@
+<div class="player-container">
+  <div class="header">
+    <button mat-icon-button routerLink="/">
+      <mat-icon>arrow_back</mat-icon>
+    </button>
+    <h2>Back to Home</h2>
+  </div>
+
+  <div *ngIf="isLoading" class="loading-spinner">
+    <mat-spinner></mat-spinner>
+  </div>
+
+  <div *ngIf="!isLoading && videoUrl" class="video-content">
+    <video controls autoplay class="video-player">
+      <source [src]="videoUrl" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    
+    <div *ngIf="video" class="video-details">
+      <h3>Video by {{ video.user.name }}</h3>
+      <p>Duration: {{ video.duration }} seconds</p>
+      <a mat-button color="accent" [href]="video.url" target="_blank">View on Pexels</a>
+    </div>
+  </div>
+
+  <div *ngIf="!isLoading && !videoUrl" class="error-message">
+    <h2>Sorry, we couldn't load this video.</h2>
+  </div>
+</div>

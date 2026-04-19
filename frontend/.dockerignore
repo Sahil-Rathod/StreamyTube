@@ -1,0 +1,10 @@
+node_modules/
+.angular/
+.git/
+.gitignore
+README.md
+dist/
+coverage/
+*.log
+.env
+.env.local
