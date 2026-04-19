@@ -11,13 +11,14 @@ public class WebConfig implements WebMvcConfigurer {
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/**")
                 .allowedOrigins(
-                    "http://localhost:4200",      // Local development
-                    "http://localhost:3000",      // Local development
-                    "https://*.vercel.app",       // Vercel deployments
-                    "https://streamytube.onrender.com" // Render backend
+                    "http://localhost:4200",
+                    "http://localhost:3000",
+                    "https://streamy-tube.vercel.app",
+                    "https://streamytube.onrender.com"
                 )
                 .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
                 .allowedHeaders("*")
-                .allowCredentials(true);
+                .allowCredentials(true)
+                .maxAge(3600);
     }
 }
