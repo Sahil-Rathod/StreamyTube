@@ -43,7 +43,7 @@ export interface PexelsResponse {
 })
 export class VideoService {
 
-  private apiUrl = `${environment.apiUrl}/api/videos`;
+  private apiUrl = 'https://streamytube.onrender.com/api/videos';
 
   constructor(private http: HttpClient) { }
 
